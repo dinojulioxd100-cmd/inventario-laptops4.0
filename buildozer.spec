@@ -12,7 +12,7 @@ source.include_exts = py, kv, png, jpg, jpeg
 # Excluir archivos de ciertas extensiones del APK
 source.exclude_exts = spec
 
-# Herramienta de bootstrap a usar
+# Herramienta de bootstrap a usar (SDL2 para apps móviles)
 p4a.bootstrap = sdl2
 
 # Directorio donde está el código fuente
@@ -33,19 +33,16 @@ android.arch = arm64-v8a
 # Configuración de la entrada de la app
 android.entrypoint = main.py
 
-# Directorios adicionales necesarios
+# Bibliotecas adicionales necesarias (si las hay)
 android.libraries = 
 
 # Ruta del AndroidManifest.xml si lo personalizas
 # android.manifest = ./AndroidManifest.xml
 
-# Versión mínima del API
+# Versión mínima del API de Android
 android.minapi = 21
 
-# Versión del SDK de Android
-android.sdk = 29
-
-# Paquete de la app
+# Paquete de la app (nombre del paquete)
 android.package = org.multiservicios.hans.inventario_laptops
 
 # Hacer un APK de depuración
@@ -66,7 +63,7 @@ android.white = False
 # Versión de la aplicación
 android.app_version = 1.0
 
-# Versión de Python
+# Versión de Python a utilizar
 python.version = 3.8
 
 # Paquetes adicionales de Python a incluir
