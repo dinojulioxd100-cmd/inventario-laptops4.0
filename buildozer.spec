@@ -1,22 +1,76 @@
 [app]
-title = Inventario Laptops Hans
-package.name = inventariolaptopshans
-package.domain = org.multiservicioshans
-source.dir = .
-source.include_exts = py,jpg,jpeg,png,kv
-version = 1.0.0
-requirements = python3,kivy
-orientation = portrait
-fullscreen = 0
+# Nombre de la aplicación
+title = Inventario Laptops
+# Nombre del paquete
+package.name = inventario_laptops
+# Dominio del paquete
+package.domain = org.multiservicios.hans
 
-# La app funciona sin internet. Estos permisos son solo para elegir fotos y guardar PDF/CSV.
-android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
-android.api = 33
-android.minapi = 23
-android.archs = arm64-v8a
+# Extensiones a incluir en el APK
+source.include_exts = py, kv, png, jpg, jpeg
+
+# Excluir archivos de ciertas extensiones del APK
+source.exclude_exts = spec
+
+# Herramienta de bootstrap a usar
 p4a.bootstrap = sdl2
-android.accept_sdk_license = True
 
-[buildozer]
-log_level = 2
-warn_on_root = 1
+# Directorio donde está el código fuente
+source.dir = .
+
+# Permisos necesarios para la app (si los hay)
+android.permissions = 
+
+# Versión mínima del SDK de Android
+android.sdk = 30
+# Versión mínima de la API de Android
+android.api = 30
+# Versión del NDK
+android.ndk = r21e
+# Arquitectura
+android.arch = arm64-v8a
+
+# Configuración de la entrada de la app
+android.entrypoint = main.py
+
+# Directorios adicionales necesarios
+android.libraries = 
+
+# Ruta del AndroidManifest.xml si lo personalizas
+# android.manifest = ./AndroidManifest.xml
+
+# Versión mínima del API
+android.minapi = 21
+
+# Versión del SDK de Android
+android.sdk = 29
+
+# Paquete de la app
+android.package = org.multiservicios.hans.inventario_laptops
+
+# Hacer un APK de depuración
+android.debug = True
+
+# Plataforma de destino
+buildozer.target = android
+
+# Modo de compilación
+buildozer.build = debug
+
+# Ruta al icono de la aplicación
+android.icon = icon.png
+
+# Hacer la app a pantalla completa (sin barra de estado)
+android.white = False
+
+# Versión de la aplicación
+android.app_version = 1.0
+
+# Versión de Python
+python.version = 3.8
+
+# Paquetes adicionales de Python a incluir
+# python.include_packages = numpy, kivy
+
+# Ruta al archivo AndroidManifest.xml, si lo necesitas personalizar
+# android.manifest = ./AndroidManifest.xml
