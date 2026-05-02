@@ -5,7 +5,8 @@ title = Inventario Laptops
 package.name = inventario_laptops
 # Dominio del paquete
 package.domain = org.multiservicios.hans
-
+# Agregar la versión de la aplicación
+version = 1.0.0  # Esta es la versión que puedes cambiar según sea necesario
 # Extensiones a incluir en el APK
 source.include_exts = py, kv, png, jpg, jpeg
 
